@@ -14,8 +14,8 @@ defaults write com.apple.finder FXPreferredViewStyle Clmv
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-defaults write com.apple.finder ShowPathbar -bool true<Paste>
-defaults write com.apple.finder ShowStatusBar -bool true<Paste>
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.dock show-process-indicators -bool true
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
