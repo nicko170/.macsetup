@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 pretty_print() {
   printf "\n%b\n" "$1"
@@ -36,32 +36,37 @@ brew install coreutils
 brew install findutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+brew tap caskroom/cask
 printf 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> ~/.zshrc
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 git config --global user.name "Nick Pratley"
 git config --global user.email "nick@npratley.net"
-
 git config --global core.excludesfile '~/.gitignore'
 echo '.DS_Store' >> ~/.gitignore
-
 git config --global credential.helper osxkeychain
-
 git config --global color.ui true
 
-
-
-
 pretty_print "Installing Ultimate VIM Runtime"
-
 git clone https://github.com/nicko170/vimrc .vim_runtime
-
 sh .vim_runtime/install_awesome_vimrc.sh
 
 pretty_print "Installing Oh My Tmux!"
 git clone https://github.com/nicko170/.tmux .tmux
-
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
+brew cask install google-chrome \
+  caffeine \
+  iterm2 \
+  hipchat \
+  docker \
+  adobe-acrobat-reader \
+  discord \
+  fing \
+  microsoft-office \
+  the-unarchiver \
+  vlc \
+  virtualbox \
+  virtualbox-extension-pack
 
