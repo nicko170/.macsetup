@@ -56,6 +56,8 @@ git clone https://github.com/nicko170/.tmux .tmux
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
+sudo gem install tmuxinator
+
 brew cask install google-chrome \
   caffeine \
   iterm2 \
